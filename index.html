@@ -1,0 +1,113 @@
+
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#09090b">
+  <meta name="description" content="A little birthday surprise made with love.">
+  <title>A Night to Remember · Dea</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loader" class="loader" aria-live="polite">
+    <div class="monogram">D</div>
+    <div class="progress"><span id="progressBar"></span></div>
+    <p><span id="progressText">0</span>% Preparing your evening…</p>
+  </div>
+
+  <main id="app" class="app is-hidden">
+    <section id="intro" class="screen intro active" data-section>
+      <div class="grain"></div>
+      <div class="intro-card reveal">
+        <span class="diamond">◆</span>
+        <p class="eyebrow">Hai Sayang</p>
+        <h1>Happy Birthday<br>Dea</h1>
+        <span class="diamond">◆</span>
+        <button id="beginBtn" class="tap-button" type="button">Tap anywhere to begin</button>
+      </div>
+    </section>
+
+    <section id="countdown" class="screen countdown" data-section>
+      <div class="count-wrap">
+        <div id="countNumber" class="count-number">3</div>
+        <p>preparing something for you…</p>
+      </div>
+    </section>
+
+    <section id="hero" class="screen hero" data-section>
+      <div class="stars" aria-hidden="true"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">Celebrating</p>
+        <h2>Dea</h2>
+        <span class="diamond">◆</span>
+        <p class="subtitle">Happy Birthday Sayang Acu <span>·</span> This is for you</p>
+        <button class="primary-btn" data-next="gallery">Let It Begin <span>↓</span></button>
+      </div>
+    </section>
+
+    <section id="gallery" class="page-section gallery-section" data-section>
+      <header class="section-header reveal-on-scroll">
+        <p class="eyebrow">All About You</p>
+        <span class="diamond">◆</span>
+      </header>
+
+      <div class="gallery-grid">
+        <figure class="memory-card reveal-on-scroll"><img src="https://imgstore.org/a/6lmw3ael4czn" alt="Memory 1"><figcaption>You</figcaption></figure>
+        <figure class="memory-card reveal-on-scroll"><img src="https://imgstore.org/a/6lmw3gg6w7bp" alt="Memory 2"><figcaption>Are</figcaption></figure>
+        <figure class="memory-card reveal-on-scroll"><img src="https://imgstore.org/a/6lmw3l6ls914" alt="Memory 3"><figcaption>So</figcaption></figure>
+        <figure class="memory-card reveal-on-scroll"><img src="https://imgstore.org/a/6lmw3p08bu9r" alt="Memory 4"><figcaption>Beautiful</figcaption></figure>
+      </div>
+
+      <button class="primary-btn center reveal-on-scroll" data-next="messages">Continue <span>→</span></button>
+    </section>
+
+    <section id="messages" class="page-section message-section" data-section>
+      <header class="section-header reveal-on-scroll">
+        <p class="eyebrow">A Message Just for You</p>
+        <span class="diamond">◆</span>
+      </header>
+
+      <div class="message-slider reveal-on-scroll">
+        <article class="message-slide active">
+          <img src="assets/images/moment-1.svg" alt="A special moment">
+          <div class="message-copy"><span class="message-no">01</span><p>Happy birthday yaa, sayang! 🥳🤍 Akhirnya nambah umur lagi nih. Semoga di umur yang baru ini kamu selalu sehat, panjang umur, rezekinya makin lancar, semua yang lagi kamu usahain bisa tercapai, dan setiap langkahmu selalu dipermudah. Hari ini pokoknya harus banyak senyum ya, karena ini hari spesial orang paling spesial buat aku. ❤️</p></div>
+        </article>
+        <article class="message-slide">
+          <img src="assets/images/moment-2.svg" alt="Memories together">
+          <div class="message-copy"><span class="message-no">02</span><p>Makasih ya udah selalu ada buat aku, udah sabar ngadepin sifat aku yang kadang nyebelin, banyak maunya, dan suka ngambek nggak jelas. Hehe. Semoga kamu nggak pernah bosen sama aku, karena jujur aku pengennya kita terus bareng, saling nemenin, saling dukung, dan bikin banyak kenangan seru sampai tua nanti.</p></div>
+        </article>
+        <article class="message-slide">
+          <img src="assets/images/moment-3.svg" alt="Golden times">
+          <div class="message-copy"><span class="message-no">03</span><p>Sekali lagi, selamat ulang tahun ya, cintaku. Semoga tahun ini jadi tahun terbaik buat kamu, penuh kebahagiaan dan hal-hal baik yang nggak ada habisnya. Jangan lupa tetap jadi diri kamu yang selalu aku banggakan, dan satu lagi... cintanya ke aku jangan sampai berkurang ya. 😜❤️ I love you, today, tomorrow, and always.</p></div>
+        </article>
+
+        <div class="slider-controls">
+          <button id="prevMessage" aria-label="Pesan sebelumnya">←</button>
+          <div id="sliderDots" class="slider-dots" aria-label="Navigasi pesan"></div>
+          <button id="nextMessage" aria-label="Pesan berikutnya">→</button>
+        </div>
+      </div>
+
+      <button class="primary-btn center reveal-on-scroll" data-next="ending">Continue <span>→</span></button>
+    </section>
+
+    <section id="ending" class="screen ending" data-section>
+      <canvas id="confetti" aria-hidden="true"></canvas>
+      <div class="ending-content reveal-on-scroll">
+        <p class="eyebrow">Thank you for being here</p>
+        <h2>Happy Birthday Dea ♡♡♡♡♡♡♡♡</h2>
+        <div class="heart">♡</div>
+        <p class="subtitle">you deserve all the good things in life.</p>
+        <button id="replayBtn" class="text-btn">↺ Replay the night</button>
+      </div>
+    </section>
+  </main>
+
+  <button id="musicBtn" class="music-btn is-hidden" aria-label="Putar atau jeda musik">♫</button>
+  <audio id="bgMusic" loop preload="none">
+    <source src="https://jumpshare.com/s/gymes5CBwDCv4dIWIVMQ" type="audio/mpeg">
+  </audio>
+  <script src="script.js"></script>
+</body>
+</html>
